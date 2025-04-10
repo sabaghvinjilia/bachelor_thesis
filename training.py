@@ -73,7 +73,6 @@ model.fit(
     validation_steps=len(testX) // BS,
     epochs=EPOCHS)
 
-# Evaluate and save
 predIdxs = model.predict(testX, batch_size=BS)
 predIdxs = np.argmax(predIdxs, axis=1)
 model.save("mask.h5")
